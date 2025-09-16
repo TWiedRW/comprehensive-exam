@@ -1,0 +1,337 @@
+---
+title: "Beyond the Surface"
+subtitle: "Evaluating Perception and Accuracy in 3D Printed Data Visualizations"
+author: "Tyler Wiederich"
+date: "2025-09-18"
+date-format: long
+format: 
+  revealjs:
+    smaller: true
+logo: "https://ucomm.unl.edu/sites/unl.edu.university-communication/files/styles/no_crop_960/public/media/image/R-Nebraska_N-name-RGB.png?itok=T3Hr--6l"
+bibliography: references.bib
+---
+
+## Overview
+
+-   Motivation and Background
+-   Projects
+    1.  3D Bar Charts
+    2.  Experiential Learning
+    3.  3D Heat Maps
+-   Roadmap
+-   Contribution
+
+```{r}
+library(tidyverse)
+```
+
+# Motivation
+
+## Motivation
+
+:::::: columns
+:::: {.column width="45%\""}
+Modern statistical graphics exist largely within the confines of 2D projections.
+
+-   Research articles
+-   Textbooks
+-   Documentation / reports
+-   News articles
+
+::: incremental
+Why?
+
+-   Easy to make
+-   Low cost to produce
+-   Many available software options
+:::
+::::
+
+::: {.column width="50%" style="background:#BDBDBD; border-radius:10px;"}
+![*Source: www.1011now.com*](images/koln-weather.jpg){width="50%" fig-align="center"}
+
+![*Source: www.klkntv.com*](images/klkntv-poll.png){width="50%" fig-align="center"}
+
+![*Source: Black Hills Energy*](images/blackhills-energy-bill.png){width="50%" fig-align="center"}
+:::
+::::::
+
+::: notes
+:::
+
+## Motivation
+
+The rise in computer graphics also included the pioneering of 3D graphical renderings [^1] [^2]. Many software programs include options for creating such charts, including:
+
+[^1]: @helen2016
+
+[^2]: @rgl
+
+::::: columns
+::: {.column width="50%"}
+-   R
+-   Python
+-   SAS
+-   MATLAB
+-   SPSS
+-   etc.
+:::
+
+::: {.column width="50%"}
+PLACEHOLDER: ROTATING 3D CHART
+:::
+:::::
+
+::: notes
+The first digital 3d software was Sketchpad, created by Ivan Sutherland as part of his PhD in 1963.
+:::
+
+------------------------------------------------------------------------
+
+::: {#fig-excel layout-ncol="2"}
+![Microsoft® Excel 95](images/excel95-3d-chart.png){#fig-excel3 height="400px" fig-align="center"}
+
+![Microsoft ® Excel for Mac, Version 16](images/excel-modern-surface.png){#fig-modern fig-align="center" height="400px"}
+
+Two 3D charts created with Microsoft® Excel
+:::
+
+::: notes
+Other types of 3d charts include area, line, bar, and pie
+:::
+
+## Motivation
+
+To date, there is no widespread usage of 3D statistical graphics outside of 2D projections. They are generally considered to be items of interest, without a formal role in data interpretations.
+
+![3D visualization of \_\_\_ in DSCI 210 at Winona State University, 2019.](images/solar-system.JPG){#fig-dsci210 .r-stretch fig-align="center" style="border-radius:20px; filter: blur(50px);"}
+
+## Motivation
+
+To date, there is no widespread usage of 3D statistical graphics outside of 2D projections. They are generally considered to be items of interest, without a formal role in data interpretations.
+
+![3D visualization of \_\_\_ in DSCI 210 at Winona State University, 2019.](images/solar-system.JPG){.r-stretch fig-align="center" style="border-radius:20px; filter: blur(0px);"}
+
+# Background
+
+## Background
+
+Types of 3D charts can be grouped into one of two categories.
+
+::::: columns
+::: {.fragment .fade-in-then-semi-out .column width="45%\""}
+**Decorative 3D**
+
+-   2D charts converted drawn to have artificial axis
+-   Considered to by "chart junk"
+-   Static renderings
+:::
+
+::: {.fragment .column width="45%\""}
+**Informational 3D**
+
+-   All axes convey information
+-   XXX
+-   Static or interactive renderings
+:::
+:::::
+
+## Evaluation of 3D Charts
+
+-   Accuracy
+
+-   Response times
+
+-   
+
+## Decorative 3D
+
+Results
+
+-   
+
+## Informational 3D
+
+Results
+
+-   
+
+## Data beyond a screen
+
+All of reported results have one key limitation: they are limited to 3D charts presented on 2D surfaces. Modern technology has made it feasible to create ...
+
+The availability and cheapening costs of 3D printers have made physical 3D charts a feasible option in displaying graphics.
+
+![Sales of 3D printers, shown on a 3D printed chart.](images/first-3d-printed-chart.jpg){#fig-wsj2014 fig-align="center"}
+
+## Research Objectives
+
+Data physicalization of statistical graphics has not been widely studied. In our research, we are broadly studying the following questions:
+
+::: {.fragment .fade-in-then-semi-out}
+-   Do 3D-printed charts follow patterns found in previous studies that compared different types of charts?
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   Are 3D-printed charts better or worse than their digitized counterparts (2D and 3D renderings) regarding numerical accuracies of stimuli comparisons?
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   How do students participating in our experiments reflect on the scientific process, both as a participant and when viewing the study through the eyes of a researcher?
+:::
+
+# Project 1: 3D Bar Charts
+
+## 3D Bar Charts
+
+::: {#fig-bars layout-ncol=3}
+
+![Image 1](images/preferance-example1.png){#fig-examp1 height=400px}
+
+![Image 2](images/preferance-example2.png){#fig-examp2 height=400px}
+
+![image 3](images/skewed-angle.jpg){#fig-examp3 height=400px}
+
+Three 3d bar charts found in nature.
+:::
+
+## @cleveland1984
+
+While early testing of statistical graphics took place in the early 20th century [^3] [^4], a major study was conducted by @cleveland1984 to provide guidance on better visualization practices.
+
+[^3]: @croxton1927
+
+[^4]: @vanderplas2020
+
+This study sought to provide a ranking of Elementary Perceptual Tasks (EPTs), which are the ways in which people extract quantitative information from a graph.
+
+------------------------------------------------------------------------
+
+![Examples of EPTs listed in Figure 1 of @cleveland1984.](images/cm-fig1.png){#fig-cmept fig-align="center" width="100%"}
+
+------------------------------------------------------------------------
+
+### Stimuli
+
+-   Target stimuli followed $s_i=10 \times 10^{(i-1)/12},\quad i=1,\dots, 10$
+-   Ratios of target stimuli: 0.178, 0.261, 0.383, 0.464 (twice), 0.562, 0.681 (twice), 0.825 (twice)
+
+::: notes
+All non-target stimuli were chosen at random, subject to constraints.
+:::
+
+### Experimental Design
+
+-   Treatments
+    -   Ratio (10)
+    -   Graph type (5)
+-   Responses
+    -   Correctly identify smaller value of stimuli pair
+    -   $\log_2(|\text{Error}|+1/8)$
+-   Procedure
+    -   5 practice graphs followed by 50 graphs in an identical randomized order for each participant
+
+------------------------------------------------------------------------
+
+```{r}
+#| label: fig-cm-values
+#| fig-cap: "Stimuli and ratios used by @cleveland1984. "
+#| fig-subcap: 
+#| - "Stimuli Values"
+#| - "Ratios"
+#| layout-ncol: 2
+#| out-height: 100%
+stimuli <- 10*10^((1:10-1)/12)
+ggplot(mapping = aes(x = 1:10, y = stimuli)) + 
+  geom_bar(stat = 'identity', color = 'black', width = 1, fill = '#B50000') + 
+  scale_x_continuous(breaks = 1:10) + 
+  scale_y_continuous(breaks = c(0,stimuli), labels = round(c(0,stimuli),1), limits = c(0, 60),
+                     expand = c(0,0)) +
+  labs(x = '', y = 'Stimuli Value') + 
+  theme_bw() + 
+  theme(aspect.ratio = 1, 
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(size = 12, angle = 30, hjust = 1),
+        axis.title.y = element_text(size = 14),
+        axis.ticks.x = element_blank(),
+        panel.grid.minor = element_blank())
+
+ratios <- c(0.178, 0.261, 0.383, 0.464, 0.562, 0.681, 0.825)
+twice <- c(0.464, 0.681, 0.825)
+
+ggplot(mapping = aes(x = 1:length(ratios), y = ratios)) + 
+  geom_bar(stat = 'identity', color = 'black', width = 1, fill = '#B50000') + 
+  scale_x_continuous(breaks = 1:10) + 
+  scale_y_continuous(breaks = c(0,ratios), labels = round(c(0,ratios),3), limits = c(0, 1),
+                     expand = c(0,0)) +
+  labs(x = '', y = 'Ratio',
+       caption = '* = used twice') + 
+  annotate('text', x = (1:length(ratios))[ratios %in% twice], y = twice-0.1, label = '*', size = 10) +
+  theme_bw() + 
+  theme(aspect.ratio = 1, 
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(size = 12, angle = 30, hjust = 1),
+        axis.title.y = element_text(size = 14),
+        plot.caption = element_text(size = 10),
+        axis.ticks.x = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+![Chart types used by @cleveland1984](images/cm-types.png){#fig-cmtypes fig-align="center" width="\"100%"}
+
+## Project 1
+
+# Project 2: Experiential Learning
+
+# Project 3: 3D Heat Maps
+
+# Roadmap
+
+## Roadmap
+
+:::::: {.columns align="center"}
+::: {.column width="33%"}
+**3D Bar Charts**
+
+-   ✅ Lit Review
+-   ✅ Design
+-   ✅ Data Collection
+-   ✅ Analysis
+-   ✅ Write-up
+:::
+
+::: {.column width="33%"}
+**Experiential Learning**
+
+-   ✅ Design
+-   ➡️ Data Collection
+    -   ✅ 3D Bar Charts
+    -   ➡️ 3D Heat Maps
+-   Analysis
+-   Write-up
+:::
+
+::: {.column width="33%"}
+**3D Heat Maps**
+
+-   ✅ Lit Review
+-   ✅ Design
+-   ➡️ Data Collection
+-   Analysis
+-   Write-up
+:::
+::::::
+
+# Contribution to literature
+
+## Contribution to literature
+
+Nearly all studies involving statistical graphics use printed or digitized charts. This is reasonable given that they
+
+The only exceptions that we found were tactile charts and virtual reality.
+
+## References
