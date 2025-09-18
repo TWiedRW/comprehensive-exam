@@ -460,7 +460,7 @@ stimuli %>%
         panel.grid.major.y = element_line(color = 'grey70'),
         panel.grid.minor.y = element_line(color = 'grey80', linetype = 'dashed'))
 ```
-
+<!---
 ## Aside
 
 What is the benefit of using the same ratio twice?
@@ -494,6 +494,8 @@ Using the method of constant stimuli, stimuli pairs have a larger difference for
 
 - If there is a difference in ratio estimations between stimuli pairs at the same ratio, then we show that the physical difference is also an important factor, meaning that future studies need to take this into consideration
 :::
+
+--->
 
 ## Media Types
 
