@@ -21,6 +21,10 @@ bibliography: references.bib
 -   Roadmap
 -   Contribution
 
+:::{.notes}
+Experiential learning serves a dual purpose by letting Stat 218 students interact with the study, thus letting us get a large sample size
+:::
+
 ```{r}
 library(tidyverse)
 ```
@@ -41,7 +45,7 @@ Modern statistical graphics exist largely within the confines of 2D projections.
 ::: incremental
 Why?
 
--   Easy to make
+-   Easy to make / understand
 -   Low cost to produce
 -   Many available software options
 :::
@@ -78,11 +82,15 @@ The rise in computer graphics also included the pioneering of 3D graphical rende
 :::
 
 ::: {.column width="50%"}
-PLACEHOLDER: ROTATING 3D CHART
+
+![3D scatterplot of the Palmer Penguins dataset from @penguins](images/rotating-penguins.gif){#fig-rotating-scatter fig-align='center'}
+
 :::
 :::::
 
 ::: notes
+Mention Excel in the list of software
+
 The first digital 3d software was Sketchpad, created by Ivan Sutherland as part of his PhD in 1963.
 :::
 
@@ -104,13 +112,11 @@ Other types of 3d charts include area, line, bar, and pie
 
 To date, there is no widespread usage of 3D statistical graphics outside of 2D projections. They are generally considered to be items of interest, without a formal role in data interpretations.
 
-![3D visualization of \_\_\_ in DSCI 210 at Winona State University, 2019.](images/solar-system.JPG){#fig-dsci210 .r-stretch fig-align="center" style="border-radius:20px; filter: blur(50px);"}
+![3D visualization of \_\_\_ in DSCI 210 at Winona State University, 2019.](images/solar-system.JPG){#fig-dsci210 .r-stretch fig-align="center"}
 
-## Motivation
-
-To date, there is no widespread usage of 3D statistical graphics outside of 2D projections. They are generally considered to be items of interest, without a formal role in data interpretations.
-
-![3D visualization of \_\_\_ in DSCI 210 at Winona State University, 2019.](images/solar-system.JPG){.r-stretch fig-align="center" style="border-radius:20px; filter: blur(0px);"}
+::: notes
+There are many instances of data physicalization, but often utilized for unique artistic displays.
+:::
 
 # Background
 
@@ -123,7 +129,7 @@ Types of 3D charts can be grouped into one of two categories.
 **Decorative 3D**
 
 -   2D charts converted drawn to have artificial axis
--   Considered to by "chart junk"
+-   Considered to be "chart junk"[^3]
 -   Static renderings
 :::
 
@@ -131,38 +137,73 @@ Types of 3D charts can be grouped into one of two categories.
 **Informational 3D**
 
 -   All axes convey information
--   XXX
+-   Intuitive use cases
 -   Static or interactive renderings
 :::
 :::::
 
+[^3]: @tufte2001
+
 ## Evaluation of 3D Charts
+
+There are many possible metrics to evaluate the qualities of a chart ^[@vanderplas2020] ^[@vanderplas2017] ^[@buja2009] ^[@cleveland1984] ^[@peña2020].
 
 -   Accuracy
 
 -   Response times
 
--   
+-   Pattern recognition
+
+-   Memorability
+
+-   Preference
 
 ## Decorative 3D
 
-Results
+The relationship between 2D and 3D bar charts presented on paper or computer screens has been widely studied.
 
--   
+::: {.fragment .fade-in-then-semi-out}
+-   Accuracy tends to be worse than 2D equivalents, although not always with statistical significance [@zacks1998; @siegrist1996; @melodycarswell1991; @stewart2009].
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   More time is needed to answer questions than 2D equivalents [@siegrist1996; @fischer2000; @stewart2009].
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   2D charts chosen more often when used for numerical estimations, although 3D is chosen more often when presenting results to others [@levy1996; @fisher1997; @stewart2009].
+:::
 
 ## Informational 3D
 
-Results
+Unlike decorative 3D elements, direct comparisons of dimensionality is more limited when the third dimension coveys information.
 
--   
+::: {.fragment .fade-in-then-semi-out}
+-   Accuracy is worse for volumes than for areas [@croxton1932].
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   Can sometimes better encode information [@barfield1989].
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   3D heat maps have lower error rates than 2D heat maps in virtual reality [@kraus2020].
+:::
+
+::: notes
+-   @kraus2020 talks about more time needed for 3D charts
+-   Also, @kraus2020 mentioned 2D was better for overview tasks
+:::
 
 ## Data beyond a screen
 
-All of reported results have one key limitation: they are limited to 3D charts presented on 2D surfaces. Modern technology has made it feasible to create ...
+All of reported results have one key limitation: they are limited to 3D charts presented on 2D surfaces. With modern technology, we are able to create 3D charts in our 3D world via 3D-printing. The rising popularity and decreasing cost of 3D printers makes this option more feasible to implement in the communication of data.
 
-The availability and cheapening costs of 3D printers have made physical 3D charts a feasible option in displaying graphics.
+![3D-printed representation of 3D printer sales. Source: Wall Street Journal [(link to print)](https://www.thingiverse.com/thing:365994)](images/first-3d-printed-chart.jpg){#fig-wsj2014 fig-align="center"}
 
-![Sales of 3D printers, shown on a 3D printed chart.](images/first-3d-printed-chart.jpg){#fig-wsj2014 fig-align="center"}
+::: notes
+-   @kraus2020 uses VR
+:::
 
 ## Research Objectives
 
@@ -173,43 +214,50 @@ Data physicalization of statistical graphics has not been widely studied. In our
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
--   Are 3D-printed charts better or worse than their digitized counterparts (2D and 3D renderings) regarding numerical accuracies of stimuli comparisons?
+-   Are 3D-printed charts better or worse than their digitized counterparts (2D and 3D renderings) regarding numerical accuracies of stimuli ratio comparisons?
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
 -   How do students participating in our experiments reflect on the scientific process, both as a participant and when viewing the study through the eyes of a researcher?
 :::
 
+:::{.notes}
+I believe only there are only a couple of studies that focus on the memorability of statistical graphics
+
+
+:::
+
 # Project 1: 3D Bar Charts
 
 ## 3D Bar Charts
 
-::: {#fig-bars layout-ncol=3}
+::: {#fig-bars layout-ncol="3"}
+![Figure from @cdi_hathitrust_hathifiles_uva_x030492864](images/preferance-example1.png){#fig-examp1 height="400px"}
 
-![Image 1](images/preferance-example1.png){#fig-examp1 height=400px}
+![Figure from @cdi_hathitrust_hathifiles_uva_x030492864](images/preferance-example2.png){#fig-examp2 height="400px"}
 
-![Image 2](images/preferance-example2.png){#fig-examp2 height=400px}
+![Figure from @ModleyRudolf1952Pag](images/skewed-angle.jpg){#fig-examp3 height="400px"}
 
-![image 3](images/skewed-angle.jpg){#fig-examp3 height=400px}
-
-Three 3d bar charts found in nature.
+Three examples of 3D bar charts found in publications. 
 :::
 
+## Overview of Project 1
+
+While early testing of statistical graphics started in the early 20th century [^4] [^5], a major study was conducted by @cleveland1984 to provide guidance on better visualization practices. In their study, numerical estimations of stimuli ratios showed differences in various methods of data representation.
+
+In our study, we partially replicate Cleveland and McGill's study, including the additional factor of chart medium.
+
+[^4]: @croxton1932
+
+[^5]: @vanderplas2020
+
+------------------------------------------------------------------------
+
+![Examples of EPTs listed in Figure 1 of @cleveland1984.](images/cm-fig1.png){#fig-cmept .rstretch fig-align="center"}
+
+------------------------------------------------------------------------
+
 ## @cleveland1984
-
-While early testing of statistical graphics took place in the early 20th century [^3] [^4], a major study was conducted by @cleveland1984 to provide guidance on better visualization practices.
-
-[^3]: @croxton1927
-
-[^4]: @vanderplas2020
-
-This study sought to provide a ranking of Elementary Perceptual Tasks (EPTs), which are the ways in which people extract quantitative information from a graph.
-
-------------------------------------------------------------------------
-
-![Examples of EPTs listed in Figure 1 of @cleveland1984.](images/cm-fig1.png){#fig-cmept fig-align="center" width="100%"}
-
-------------------------------------------------------------------------
 
 ### Stimuli
 
@@ -219,19 +267,6 @@ This study sought to provide a ranking of Elementary Perceptual Tasks (EPTs), wh
 ::: notes
 All non-target stimuli were chosen at random, subject to constraints.
 :::
-
-### Experimental Design
-
--   Treatments
-    -   Ratio (10)
-    -   Graph type (5)
--   Responses
-    -   Correctly identify smaller value of stimuli pair
-    -   $\log_2(|\text{Error}|+1/8)$
--   Procedure
-    -   5 practice graphs followed by 50 graphs in an identical randomized order for each participant
-
-------------------------------------------------------------------------
 
 ```{r}
 #| label: fig-cm-values
@@ -249,11 +284,11 @@ ggplot(mapping = aes(x = 1:10, y = stimuli)) +
                      expand = c(0,0)) +
   labs(x = '', y = 'Stimuli Value') + 
   theme_bw() + 
-  theme(aspect.ratio = 1, 
+  theme(aspect.ratio = 1/2, 
         panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
         axis.text.x = element_blank(),
-        axis.text.y = element_text(size = 12, angle = 30, hjust = 1),
+        axis.text.y = element_text(size = 16, angle = 30, hjust = 1),
         axis.title.y = element_text(size = 14),
         axis.ticks.x = element_blank(),
         panel.grid.minor = element_blank())
@@ -270,24 +305,283 @@ ggplot(mapping = aes(x = 1:length(ratios), y = ratios)) +
        caption = '* = used twice') + 
   annotate('text', x = (1:length(ratios))[ratios %in% twice], y = twice-0.1, label = '*', size = 10) +
   theme_bw() + 
-  theme(aspect.ratio = 1, 
+  theme(aspect.ratio = 1/2, 
         panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
         axis.text.x = element_blank(),
-        axis.text.y = element_text(size = 12, angle = 30, hjust = 1),
+        axis.text.y = element_text(size = 16, angle = 30, hjust = 1),
         axis.title.y = element_text(size = 14),
         plot.caption = element_text(size = 10),
         axis.ticks.x = element_blank(),
         panel.grid.minor = element_blank())
 ```
 
+## @cleveland1984
+
+### Chart Types
+
 ![Chart types used by @cleveland1984](images/cm-types.png){#fig-cmtypes fig-align="center" width="\"100%"}
+
+-   Type 1: Position along a common scale
+-   Type 2: Position along a common scale
+-   Type 3: Position along a common scale
+-   Type 4: Length
+-   Type 5: Length
+
+## @cleveland1984
+
+### Experimental Design
+
+-   Treatments
+    -   Ratio (10)
+    -   Graph type (5)
+-   Responses
+    -   Correctly identify smaller value of stimuli pair
+    -   $\log_2(|\text{Error}|+1/8)$
+-   Procedure
+    -   5 practice graphs followed by 50 graphs in an identical randomized order for each participant
 
 ## Project 1
 
-# Project 2: Experiential Learning
+Our first project partially replicates and expands on the first experiment by @cleveland1984.
+
+```{r}
+tribble(
+  ~Component,	~`Our Research`, 	~`Cleveland and McGill`,
+'# of ratios',	'7 ratios',	'10 ratios (7 unique)',
+'# of chart types',	'2',	'5',
+'# of media types',	'3 (2D and 3D digitized, 3D printed)',	'1 (2D on paper)',
+'# of charts/participant', '15',	'50'
+) %>% 
+  knitr::kable()
+```
+
+::: notes
+To get 15 graphs per participant, we used incomplete blocking of 5 on the seven ratios. The type of chart was randomly allotted so that number of Type 1 and Type 3 charts were approximately the same.
+
+After the pilot study, a static 3D chart was included into the study.
+:::
+
+## Project 1 Chart Examples
+
+![Charts used in bar chart pilot study.](images/pilot-charts.png){#fig-p1-charts fig-align='center'}
+
+## Project 1 Results
+
+![Results from pilot study conducted for the 3D bar chart experiment.](images/project1-results.png){#fig-project1-results fig-align="center"}
+
+::: notes
+Using a generalized additive model (GAM), the only significant effect was either replicating Type 1 or Type 3. In the pilot study, we had 38 participants, so it is likely that the experiment was under-powered.
+
+-   Integration of the experiment into Stat 218 has provided many more responses, but results have not yet been analyzed.
+:::
 
 # Project 3: 3D Heat Maps
+
+## 3D Heat Maps
+
+:::{#fig-heatmaps layout-ncol=2}
+
+![Figure from @national1977condition](images/heatmap3d.png){#fig-nat77 height=400px}
+
+![Figure from @3DPopulationDensity](images/lincoln-pop.png){#fig-lincoln-pop height=400px}
+
+Examples of 3D heat maps.
+:::
+
+## Overview of Project 3
+
+We maintain the same objective when adding information to the third dimension: does numerical accuracy of ratio estimations differ between dimensionality and projections of chart types. However, it is important to note that direct translations of 2D and 3D heatmaps require different visual cues.
+
+::: {#fig-color-height layout-ncol="2"}
+![Flatter height scale](images/height-color-0.3.png){#fig-flat3d}
+
+![Stretched height scale](images/height-color-2.png){#fig-tall3d}
+
+Two figures representing the volcano dataset [@volcano] using different height scaling factors. Both figures use the same color scale, but there is no "correct" translation of color into the measurable height.
+:::
+
+::: notes
+2D heat maps use color, 3D heat maps use height and can possibly use color as well.
+:::
+
+## Stimuli Construction
+
+```{r}
+load('stimuli.rda')
+```
+
+The design of the 3D heat map experiment uses the method of constant stimuli: ratios are estimated with respect to one stimuli height that remains the same.
+
+Setting 50 as the constant and 90 as the maximum, a sequence of stimuli are chosen by equally partitioning the ratios between $50/50=1$ and $50/90\approx0.556$. The same ratios are used when setting 50 as the maximum in the stimuli pair.
+
+```{r}
+#| label: fig-p3-stimuli
+#| fig-cap: "Stimuli used in 3D heat map experiment. All values are paired with the stimuli magnitude of 50."
+#| fig-subcap:
+#| - "Stimuli values"
+#| - "Ratios of stimuli pairs"
+#| layout-ncol: 2
+stimuli %>% 
+  ggplot(mapping = aes(x = pair_id, y = values)) + 
+  geom_bar(stat = 'identity', width = 1, color = 'black', fill = '#B50000') + 
+  geom_text(aes(label = round(values, 1), y = 5), size = 5) + 
+  theme_minimal() + 
+  annotate('text', x = 5, y = 25, label = '*', size = 8) +
+  labs(x = '', y = 'Magnitude of Stimuli') +
+  scale_x_continuous(breaks = 1:9) + 
+  scale_y_continuous(limits = c(0, 100)) +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        aspect.ratio = 1/2,
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 14),
+        axis.text.x = element_blank(),
+        panel.grid.major.y = element_line(color = 'grey70'),
+        panel.grid.minor.y = element_line(color = 'grey80', linetype = 'dashed'))
+
+stimuli %>% 
+  mutate(ratio = round(map2_dbl(values, constant, \(x,y)(min(x,y)/max(x,y))), 2)) %>% 
+  select(ratio) %>% 
+  distinct() %>% 
+  ggplot(mapping = aes(x = 1:5, y = ratio)) + 
+  geom_bar(stat = 'identity', width = 1, color = 'black', fill = '#B50000') + 
+  geom_text(aes(label = round(ratio, 2), y = 0.125/2), size = 5) + 
+  theme_minimal() + 
+  labs(x = '', y = 'Ratio of Stimuli') +
+  scale_x_continuous(breaks = 1:5) + 
+  scale_y_continuous(limits = c(0, 1)) +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 14),
+        aspect.ratio = 1/2,
+        panel.grid.major.y = element_line(color = 'grey70'),
+        panel.grid.minor.y = element_line(color = 'grey80', linetype = 'dashed'))
+```
+
+## Aside
+
+What is the benefit of using the same ratio twice?
+
+::: fragment
+```{r}
+#| label: fig-diff-ratio
+#| fig-cap: "Scatterplot of ratios and difference of each stimuli pairs."
+stimuli %>% 
+  mutate(diff = round(map2_dbl(values, constant, \(x,y)(max(x,y)-min(x,y))),1),
+         ratio = round(map2_dbl(values, constant, \(x,y)(min(x,y)/max(x,y))), 2),
+         constant.in.pair = case_when(
+           values == constant ~ 'Stimuli are same value',
+           values < constant ~ 'Constant is larger',
+           values > constant ~ 'Constant is smaller'
+         )) %>% 
+  ggplot(aes(x = ratio, y = diff, color = constant.in.pair)) + 
+  geom_point() + 
+  labs(x = 'Ratio of stimuli',
+       y = 'Difference of stimuli',
+       color = 'Stimuli status') + 
+  theme_bw() + 
+  theme(aspect.ratio = 1)
+```
+:::
+
+::: notes
+Since color does not have a direct translation to height, it is a good idea to see if ratio estimations are different depending on the physical different of the bars on the heat map. 
+
+Using the method of constant stimuli, stimuli pairs have a larger difference for smaller ratios.
+
+- If there is a difference in ratio estimations between stimuli pairs at the same ratio, then we show that the physical difference is also an important factor, meaning that future studies need to take this into consideration
+:::
+
+## Media Types
+
+:::{#fig-heat3dexamples layout-ncol=3}
+
+![2D heatmap](images/examp2dd.png){#fig-2dd height=300px}
+
+![3D Digital heatmap](images/examp3dd.png){#fig-3dd height=300px}
+
+![3D-Printed heatmap](images/examp3dp.png){#fig-3dp height=300px}
+
+Media types using dataset 1 in the 3D heatmap experiment.
+:::
+
+## Procedure
+
+**Treatment Design**
+
+-   9 stimuli pairs
+-   3 media types
+-   2 heat map datasets
+
+**Experiment Design**
+
+1.  Create incomplete blocks on stimuli pairs (choose 4 from 9)
+2.  Randomly assign participant to block on experiment initialization
+3.  Present media type x dataset in randomized order (whole-plot)
+4.  Present stimuli pair in randomized order (split-plot)
+
+# Project 2: Experiential Learning
+
+## Experiential Learning
+
+In a dual purpose role, a large sample was obtained for the two previous projects by incorporating the experiments as an experiential learning opportunity for Stat 218 students. This is a six stage project that follows students from participants to consumers of scientific knowledge.
+
+:::{.columns}
+
+:::{.column .fragment .fade-in-then-semi-out width=30%}
+**Informed Consent**
+
+- Obtain consent
+- Confirm age of majority (≥19)
+:::
+
+:::{.column .fragment .fade-in-then-semi-out width=30%}
+**Pre-experiment**
+
+- How does the scientific process differ between researchers and the general population
+:::
+
+:::{.column .fragment .fade-in-then-semi-out width=30%}
+**Experiment**
+
+- Provide completion code to show proof of experiment participation
+:::
+
+:::
+
+## Experiential Learning
+
+:::{.columns}
+
+:::{.column .fragment .fade-in-then-semi-out width=30%}
+**Post Experiment**
+
+- What was the purpose of experiment?
+- What were the hypotheses?
+- What are the sources of error?
+- What were the variables?
+- What elements of experimental design were present?
+:::
+
+:::{.column .fragment .fade-in-then-semi-out width=30%}
+**Abstract**
+
+- What components of the experiment are now clearer?
+:::
+
+:::{.column .fragment .fade-in-then-semi-out width=30%}
+**Presentation**
+
+- How did the information you gained from each stage differ?
+- What was emphasized in the presentation that wasn't emphasized in the the abstract?
+- What critiques do you have of the study?
+- Did you prefer the abstract or presentation?
+:::
+
+:::
 
 # Roadmap
 
@@ -307,6 +601,7 @@ ggplot(mapping = aes(x = 1:length(ratios), y = ratios)) +
 ::: {.column width="33%"}
 **Experiential Learning**
 
+-   ☑️ Lit Review
 -   ✅ Design
 -   ➡️ Data Collection
     -   ✅ 3D Bar Charts
@@ -330,8 +625,18 @@ ggplot(mapping = aes(x = 1:length(ratios), y = ratios)) +
 
 ## Contribution to literature
 
-Nearly all studies involving statistical graphics use printed or digitized charts. This is reasonable given that they
+Nearly all studies involving statistical graphics use paper-printed or digitized charts, resulting in a knowledge gap in statistical graphics presented in tangible formats. Our contributions are as follows:
 
-The only exceptions that we found were tactile charts and virtual reality.
+:::{.incremental}
+1. Explore the relationship of physical dimensionality on bar charts / heat maps using numerical accuracy of ratio estimations.
+2. Provide recommendations on the construction of 3D-printed statistical graphics.
+3. Explore how students interact with the process of scientific investigation using a "hands-on" statistical study.
+:::
+
+:::{.notes}
+Exceptions include tactile charts, virtual reality, and artistic data physicalization. However, the interaction with these differs vastly with our 3D printed charts.
+:::
+
+# Questions?
 
 ## References

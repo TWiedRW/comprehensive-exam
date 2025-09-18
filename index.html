@@ -373,6 +373,19 @@ Tyler Wiederich
 <li>Roadmap</li>
 <li>Contribution</li>
 </ul>
+<aside class="notes">
+<p>Experiential learning serves a dual purpose by letting Stat 218 students interact with the study, thus letting us get a large sample size</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section>
 <section id="motivation" class="title-slide slide level1 center">
@@ -393,7 +406,7 @@ Tyler Wiederich
 <div>
 <p>Why?</p>
 <ul>
-<li class="fragment">Easy to make</li>
+<li class="fragment">Easy to make / understand</li>
 <li class="fragment">Low cost to produce</li>
 <li class="fragment">Many available software options</li>
 </ul>
@@ -446,9 +459,19 @@ Tyler Wiederich
 <li>etc.</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p>PLACEHOLDER: ROTATING 3D CHART</p>
+<div id="fig-rotating-scatter" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-rotating-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/rotating-penguins.gif" class="quarto-figure quarto-figure-center">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rotating-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: 3D scatterplot of the Palmer Penguins dataset from <span class="citation" data-cites="penguins">Horst, Hill, and Gorman (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>
+</figcaption>
+</figure>
+</div>
 </div></div>
 <aside class="notes">
+<p>Mention Excel in the list of software</p>
 <p>The first digital 3d software was Sketchpad, created by Ivan Sutherland as part of his PhD in 1963.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -495,7 +518,7 @@ Tyler Wiederich
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-excel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Two 3D charts created with Microsoft® Excel
+Figure&nbsp;2: Two 3D charts created with Microsoft® Excel
 </figcaption>
 </figure>
 </div>
@@ -517,14 +540,22 @@ Figure&nbsp;1: Two 3D charts created with Microsoft® Excel
 <h2>Motivation</h2>
 <p>To date, there is no widespread usage of 3D statistical graphics outside of 2D projections. They are generally considered to be items of interest, without a formal role in data interpretations.</p>
 
-<img data-src="images/solar-system.JPG" class="r-stretch quarto-figure quarto-figure-center" style="border-radius:20px; filter: blur(50px);"><p class="caption">
-Figure&nbsp;2: 3D visualization of ___ in DSCI 210 at Winona State University, 2019.
-</p></section>
-<section id="motivation-4" class="slide level2">
-<h2>Motivation</h2>
-<p>To date, there is no widespread usage of 3D statistical graphics outside of 2D projections. They are generally considered to be items of interest, without a formal role in data interpretations.</p>
-
-<img data-src="images/solar-system.JPG" class="r-stretch quarto-figure-center"><p class="caption">3D visualization of ___ in DSCI 210 at Winona State University, 2019.</p></section></section>
+<img data-src="images/solar-system.JPG" class="r-stretch quarto-figure quarto-figure-center"><p class="caption">
+Figure&nbsp;3: 3D visualization of ___ in DSCI 210 at Winona State University, 2019.
+</p><aside class="notes">
+<p>There are many instances of data physicalization, but often utilized for unique artistic displays.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
 <section>
 <section id="background" class="title-slide slide level1 center">
 <h1>Background</h1>
@@ -538,48 +569,105 @@ Figure&nbsp;2: 3D visualization of ___ in DSCI 210 at Winona State University, 2
 <p><strong>Decorative 3D</strong></p>
 <ul>
 <li>2D charts converted drawn to have artificial axis</li>
-<li>Considered to by “chart junk”</li>
+<li>Considered to be “chart junk”<sup>1</sup></li>
 <li>Static renderings</li>
 </ul>
 </div><div class="fragment column" style="width:45%&quot;;">
 <p><strong>Informational 3D</strong></p>
 <ul>
 <li>All axes convey information</li>
-<li>XXX</li>
+<li>Intuitive use cases</li>
 <li>Static or interactive renderings</li>
 </ul>
 </div></div>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p><span class="citation" data-cites="tufte2001">Tufte (<a href="#/references" role="doc-biblioref" onclick="">2001</a>)</span></p></li></ol></aside></section>
 <section id="evaluation-of-3d-charts" class="slide level2">
 <h2>Evaluation of 3D Charts</h2>
+<p>There are many possible metrics to evaluate the qualities of a chart <sup>1</sup> <sup>2</sup> <sup>3</sup> <sup>4</sup> <sup>5</sup>.</p>
 <ul>
 <li><p>Accuracy</p></li>
 <li><p>Response times</p></li>
-<li></li>
+<li><p>Pattern recognition</p></li>
+<li><p>Memorability</p></li>
+<li><p>Preference</p></li>
 </ul>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn4"><p><span class="citation" data-cites="vanderplas2020">Vanderplas, Cook, and Hofmann (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></li><li id="fn5"><p><span class="citation" data-cites="vanderplas2017">VanderPlas and Hofmann (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></p></li><li id="fn6"><p><span class="citation" data-cites="buja2009">Buja et al. (<a href="#/references" role="doc-biblioref" onclick="">2009</a>)</span></p></li><li id="fn7"><p><span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span></p></li><li id="fn8"><p><span class="citation" data-cites="peña2020">Peña, Ragan, and Harrison (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></li></ol></aside></section>
 <section id="decorative-3d" class="slide level2">
 <h2>Decorative 3D</h2>
-<p>Results</p>
+<p>The relationship between 2D and 3D bar charts presented on paper or computer screens has been widely studied.</p>
+<div class="fragment fade-in-then-semi-out">
 <ul>
-<li></li>
+<li>Accuracy tends to be worse than 2D equivalents, although not always with statistical significance <span class="citation" data-cites="zacks1998 siegrist1996 melodycarswell1991 stewart2009">(<a href="#/references" role="doc-biblioref" onclick="">Zacks et al. 1998</a>; <a href="#/references" role="doc-biblioref" onclick="">Siegrist 1996</a>; <a href="#/references" role="doc-biblioref" onclick="">Melody Carswell, Frankenberger, and Bernhard 1991</a>; <a href="#/references" role="doc-biblioref" onclick="">Stewart, Cipolla, and Best 2009</a>)</span>.</li>
 </ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>More time is needed to answer questions than 2D equivalents <span class="citation" data-cites="siegrist1996 fischer2000 stewart2009">(<a href="#/references" role="doc-biblioref" onclick="">Siegrist 1996</a>; <a href="#/references" role="doc-biblioref" onclick="">Fischer 2000</a>; <a href="#/references" role="doc-biblioref" onclick="">Stewart, Cipolla, and Best 2009</a>)</span>.</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>2D charts chosen more often when used for numerical estimations, although 3D is chosen more often when presenting results to others <span class="citation" data-cites="levy1996 fisher1997 stewart2009">(<a href="#/references" role="doc-biblioref" onclick="">Levy et al. 1996</a>; <a href="#/references" role="doc-biblioref" onclick="">Fisher, Dempsey, and Marousky 1997</a>; <a href="#/references" role="doc-biblioref" onclick="">Stewart, Cipolla, and Best 2009</a>)</span>.</li>
+</ul>
+</div>
 </section>
 <section id="informational-3d" class="slide level2">
 <h2>Informational 3D</h2>
-<p>Results</p>
+<p>Unlike decorative 3D elements, direct comparisons of dimensionality is more limited when the third dimension coveys information.</p>
+<div class="fragment fade-in-then-semi-out">
 <ul>
-<li></li>
+<li>Accuracy is worse for volumes than for areas <span class="citation" data-cites="croxton1932">(<a href="#/references" role="doc-biblioref" onclick="">Croxton and Stein 1932</a>)</span>.</li>
 </ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Can sometimes better encode information <span class="citation" data-cites="barfield1989">(<a href="#/references" role="doc-biblioref" onclick="">Barfield and Robless 1989</a>)</span>.</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>3D heat maps have lower error rates than 2D heat maps in virtual reality <span class="citation" data-cites="kraus2020">(<a href="#/references" role="doc-biblioref" onclick="">Kraus et al. 2020</a>)</span>.</li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li><span class="citation" data-cites="kraus2020">Kraus et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> talks about more time needed for 3D charts</li>
+<li>Also, <span class="citation" data-cites="kraus2020">Kraus et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> mentioned 2D was better for overview tasks</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="data-beyond-a-screen" class="slide level2">
 <h2>Data beyond a screen</h2>
-<p>All of reported results have one key limitation: they are limited to 3D charts presented on 2D surfaces. Modern technology has made it feasible to create …</p>
-<p>The availability and cheapening costs of 3D printers have made physical 3D charts a feasible option in displaying graphics.</p>
+<p>All of reported results have one key limitation: they are limited to 3D charts presented on 2D surfaces. With modern technology, we are able to create 3D charts in our 3D world via 3D-printing. The rising popularity and decreasing cost of 3D printers makes this option more feasible to implement in the communication of data.</p>
 
 <img data-src="images/first-3d-printed-chart.jpg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">
-Figure&nbsp;3: Sales of 3D printers, shown on a 3D printed chart.
-</p></section>
+Figure&nbsp;4: 3D-printed representation of 3D printer sales. Source: Wall Street Journal <a href="https://www.thingiverse.com/thing:365994">(link to print)</a>
+</p><aside class="notes">
+<ul>
+<li><span class="citation" data-cites="kraus2020">Kraus et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span> uses VR</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="research-objectives" class="slide level2">
 <h2>Research Objectives</h2>
 <p>Data physicalization of statistical graphics has not been widely studied. In our research, we are broadly studying the following questions:</p>
@@ -590,7 +678,7 @@ Figure&nbsp;3: Sales of 3D printers, shown on a 3D printed chart.
 </div>
 <div class="fragment fade-in-then-semi-out">
 <ul>
-<li>Are 3D-printed charts better or worse than their digitized counterparts (2D and 3D renderings) regarding numerical accuracies of stimuli comparisons?</li>
+<li>Are 3D-printed charts better or worse than their digitized counterparts (2D and 3D renderings) regarding numerical accuracies of stimuli ratio comparisons?</li>
 </ul>
 </div>
 <div class="fragment fade-in-then-semi-out">
@@ -598,6 +686,19 @@ Figure&nbsp;3: Sales of 3D printers, shown on a 3D printed chart.
 <li>How do students participating in our experiments reflect on the scientific process, both as a participant and when viewing the study through the eyes of a researcher?</li>
 </ul>
 </div>
+<aside class="notes">
+<p>I believe only there are only a couple of studies that focus on the memorability of statistical graphics</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section id="project-1-3d-bar-charts" class="title-slide slide level1 center">
@@ -617,7 +718,7 @@ Figure&nbsp;3: Sales of 3D printers, shown on a 3D printed chart.
 <img data-src="images/preferance-example1.png" data-ref-parent="fig-bars" height="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-examp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Image 1
+(a) Figure from <span class="citation" data-cites="cdi_hathitrust_hathifiles_uva_x030492864"><em>1978 Handbook of Agricultural Charts. Enlargements / [u.s. Department of Agriculture]</em> (<a href="#/references" role="doc-biblioref" onclick="">1978</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -629,7 +730,7 @@ Figure&nbsp;3: Sales of 3D printers, shown on a 3D printed chart.
 <img data-src="images/preferance-example2.png" data-ref-parent="fig-bars" height="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-examp2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Image 2
+(b) Figure from <span class="citation" data-cites="cdi_hathitrust_hathifiles_uva_x030492864"><em>1978 Handbook of Agricultural Charts. Enlargements / [u.s. Department of Agriculture]</em> (<a href="#/references" role="doc-biblioref" onclick="">1978</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -641,7 +742,7 @@ Figure&nbsp;3: Sales of 3D printers, shown on a 3D printed chart.
 <img data-src="images/skewed-angle.jpg" data-ref-parent="fig-bars" height="400">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-examp3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(c) image 3
+(c) Figure from <span class="citation" data-cites="ModleyRudolf1952Pag">Modley (<a href="#/references" role="doc-biblioref" onclick="">1952</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -649,24 +750,24 @@ Figure&nbsp;3: Sales of 3D printers, shown on a 3D printed chart.
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bars-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Three 3d bar charts found in nature.
+Figure&nbsp;5: Three examples of 3D bar charts found in publications.
 </figcaption>
 </figure>
 </div>
 </section>
+<section id="overview-of-project-1" class="slide level2">
+<h2>Overview of Project 1</h2>
+<p>While early testing of statistical graphics started in the early 20th century <sup>1</sup> <sup>2</sup>, a major study was conducted by <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span> to provide guidance on better visualization practices. In their study, numerical estimations of stimuli ratios showed differences in various methods of data representation.</p>
+<p>In our study, we partially replicate Cleveland and McGill’s study, including the additional factor of chart medium.</p>
+<aside><ol class="aside-footnotes"><li id="fn9"><p><span class="citation" data-cites="croxton1932">Croxton and Stein (<a href="#/references" role="doc-biblioref" onclick="">1932</a>)</span></p></li><li id="fn10"><p><span class="citation" data-cites="vanderplas2020">Vanderplas, Cook, and Hofmann (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></li></ol></aside></section>
+<section class="slide level2">
+
+
+<img data-src="images/cm-fig1.png" class="rstretch quarto-figure quarto-figure-center r-stretch"><p class="caption">
+Figure&nbsp;6: Examples of EPTs listed in Figure 1 of <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span>.
+</p></section>
 <section id="cleveland1984" class="slide level2">
 <h2><span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span></h2>
-<p>While early testing of statistical graphics took place in the early 20th century <sup>1</sup> <sup>2</sup>, a major study was conducted by <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span> to provide guidance on better visualization practices.</p>
-<p>This study sought to provide a ranking of Elementary Perceptual Tasks (EPTs), which are the ways in which people extract quantitative information from a graph.</p>
-<aside><ol class="aside-footnotes"><li id="fn3"><p><span class="citation" data-cites="croxton1927">Croxton and Stryker (<a href="#/references" role="doc-biblioref" onclick="">1927</a>)</span></p></li><li id="fn4"><p><span class="citation" data-cites="vanderplas2020">Vanderplas, Cook, and Hofmann (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></li></ol></aside></section>
-<section class="slide level2">
-
-
-<img data-src="images/cm-fig1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p class="caption">
-Figure&nbsp;5: Examples of EPTs listed in Figure 1 of <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span>.
-</p></section>
-<section class="slide level2">
-
 <h3 id="stimuli">Stimuli</h3>
 <ul>
 <li>Target stimuli followed <span class="math inline">\(s_i=10 \times 10^{(i-1)/12},\quad i=1,\dots, 10\)</span></li>
@@ -685,26 +786,6 @@ Figure&nbsp;5: Examples of EPTs listed in Figure 1 of <span class="citation" dat
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<h3 id="experimental-design">Experimental Design</h3>
-<ul>
-<li>Treatments
-<ul>
-<li>Ratio (10)</li>
-<li>Graph type (5)</li>
-</ul></li>
-<li>Responses
-<ul>
-<li>Correctly identify smaller value of stimuli pair</li>
-<li><span class="math inline">\(\log_2(|\text{Error}|+1/8)\)</span></li>
-</ul></li>
-<li>Procedure
-<ul>
-<li>5 practice graphs followed by 50 graphs in an identical randomized order for each participant</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
 <div id="fig-cm-values" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cm-values-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -736,34 +817,423 @@ Figure&nbsp;5: Examples of EPTs listed in Figure 1 of <span class="citation" dat
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cm-values-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Stimuli and ratios used by <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span>.
+Figure&nbsp;7: Stimuli and ratios used by <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span>.
 </figcaption>
 </figure>
 </div>
-<div id="fig-cmtypes" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-cmtypes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="images/cm-types.png" class="quarto-figure quarto-figure-center">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cmtypes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Chart types used by <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span>
-</figcaption>
-</figure>
-</div>
+</section>
+<section id="cleveland1984-1" class="slide level2">
+<h2><span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span></h2>
+<h3 id="chart-types">Chart Types</h3>
+
+<img data-src="images/cm-types.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">
+Figure&nbsp;8: Chart types used by <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span>
+</p><ul>
+<li>Type 1: Position along a common scale</li>
+<li>Type 2: Position along a common scale</li>
+<li>Type 3: Position along a common scale</li>
+<li>Type 4: Length</li>
+<li>Type 5: Length</li>
+</ul>
+</section>
+<section id="cleveland1984-2" class="slide level2">
+<h2><span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span></h2>
+<h3 id="experimental-design">Experimental Design</h3>
+<ul>
+<li>Treatments
+<ul>
+<li>Ratio (10)</li>
+<li>Graph type (5)</li>
+</ul></li>
+<li>Responses
+<ul>
+<li>Correctly identify smaller value of stimuli pair</li>
+<li><span class="math inline">\(\log_2(|\text{Error}|+1/8)\)</span></li>
+</ul></li>
+<li>Procedure
+<ul>
+<li>5 practice graphs followed by 50 graphs in an identical randomized order for each participant</li>
+</ul></li>
+</ul>
 </section>
 <section id="project-1" class="slide level2">
 <h2>Project 1</h2>
-</section></section>
-<section id="project-2-experiential-learning" class="title-slide slide level1 center">
-<h1>Project 2: Experiential Learning</h1>
-
+<p>Our first project partially replicates and expands on the first experiment by <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 44%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Our Research</th>
+<th style="text-align: left;">Cleveland and McGill</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"># of ratios</td>
+<td style="text-align: left;">7 ratios</td>
+<td style="text-align: left;">10 ratios (7 unique)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"># of chart types</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"># of media types</td>
+<td style="text-align: left;">3 (2D and 3D digitized, 3D printed)</td>
+<td style="text-align: left;">1 (2D on paper)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"># of charts/participant</td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">50</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<aside class="notes">
+<p>To get 15 graphs per participant, we used incomplete blocking of 5 on the seven ratios. The type of chart was randomly allotted so that number of Type 1 and Type 3 charts were approximately the same.</p>
+<p>After the pilot study, a static 3D chart was included into the study.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
+<section id="project-1-chart-examples" class="slide level2">
+<h2>Project 1 Chart Examples</h2>
 
+<img data-src="images/pilot-charts.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">
+Figure&nbsp;9: Charts used in bar chart pilot study.
+</p></section>
+<section id="project-1-results" class="slide level2">
+<h2>Project 1 Results</h2>
+
+<img data-src="images/project1-results.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">
+Figure&nbsp;10: Results from pilot study conducted for the 3D bar chart experiment.
+</p><aside class="notes">
+<p>Using a generalized additive model (GAM), the only significant effect was either replicating Type 1 or Type 3. In the pilot study, we had 38 participants, so it is likely that the experiment was under-powered.</p>
+<ul>
+<li>Integration of the experiment into Stat 218 has provided many more responses, but results have not yet been analyzed.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
 <section id="project-3-3d-heat-maps" class="title-slide slide level1 center">
 <h1>Project 3: 3D Heat Maps</h1>
 
 </section>
+<section id="d-heat-maps" class="slide level2">
+<h2>3D Heat Maps</h2>
+<div id="fig-heatmaps" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-heatmaps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-heatmaps" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-nat77" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-nat77-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/heatmap3d.png" data-ref-parent="fig-heatmaps" height="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-nat77-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Figure from <span class="citation" data-cites="national1977condition">for Educational Statistics et al. (<a href="#/references" role="doc-biblioref" onclick="">1977</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-heatmaps" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-lincoln-pop" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-lincoln-pop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/lincoln-pop.png" data-ref-parent="fig-heatmaps" height="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lincoln-pop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Figure from <span class="citation" data-cites="3DPopulationDensity"><span>“<span>3D Population Density</span> of the <span>US</span> - <span>HomeArea</span>.com”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-heatmaps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Examples of 3D heat maps.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="overview-of-project-3" class="slide level2">
+<h2>Overview of Project 3</h2>
+<p>We maintain the same objective when adding information to the third dimension: does numerical accuracy of ratio estimations differ between dimensionality and projections of chart types. However, it is important to note that direct translations of 2D and 3D heatmaps require different visual cues.</p>
+<div id="fig-color-height" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-color-height-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-color-height" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-flat3d" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-flat3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/height-color-0.3.png" data-ref-parent="fig-color-height">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-flat3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Flatter height scale
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-color-height" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-tall3d" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-tall3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/height-color-2.png" data-ref-parent="fig-color-height">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-tall3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Stretched height scale
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-color-height-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Two figures representing the volcano dataset <span class="citation" data-cites="volcano">(<a href="#/references" role="doc-biblioref" onclick="">R Core Team 2024</a>)</span> using different height scaling factors. Both figures use the same color scale, but there is no “correct” translation of color into the measurable height.
+</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p>2D heat maps use color, 3D heat maps use height and can possibly use color as well.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="stimuli-construction" class="slide level2">
+<h2>Stimuli Construction</h2>
+<p>The design of the 3D heat map experiment uses the method of constant stimuli: ratios are estimated with respect to one stimuli height that remains the same.</p>
+<p>Setting 50 as the constant and 90 as the maximum, a sequence of stimuli are chosen by equally partitioning the ratios between <span class="math inline">\(50/50=1\)</span> and <span class="math inline">\(50/90\approx0.556\)</span>. The same ratios are used when setting 50 as the maximum in the stimuli pair.</p>
+<div id="fig-p3-stimuli" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-p3-stimuli-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-p3-stimuli" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-p3-stimuli-1" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-p3-stimuli-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="index_files/figure-revealjs/fig-p3-stimuli-1.png" data-ref-parent="fig-p3-stimuli" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-p3-stimuli-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Stimuli values
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-p3-stimuli" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-p3-stimuli-2" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-p3-stimuli-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="index_files/figure-revealjs/fig-p3-stimuli-2.png" data-ref-parent="fig-p3-stimuli" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-p3-stimuli-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Ratios of stimuli pairs
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-p3-stimuli-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Stimuli used in 3D heat map experiment. All values are paired with the stimuli magnitude of 50.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="aside" class="slide level2">
+<h2>Aside</h2>
+<p>What is the benefit of using the same ratio twice?</p>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-diff-ratio" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-diff-ratio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="index_files/figure-revealjs/fig-diff-ratio-1.png" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diff-ratio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: Scatterplot of ratios and difference of each stimuli pairs.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Since color does not have a direct translation to height, it is a good idea to see if ratio estimations are different depending on the physical different of the bars on the heat map.</p>
+<p>Using the method of constant stimuli, stimuli pairs have a larger difference for smaller ratios.</p>
+<ul>
+<li>If there is a difference in ratio estimations between stimuli pairs at the same ratio, then we show that the physical difference is also an important factor, meaning that future studies need to take this into consideration</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="media-types" class="slide level2">
+<h2>Media Types</h2>
+<div id="fig-heat3dexamples" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-heat3dexamples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-heat3dexamples" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-2dd" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-2dd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/examp2dd.png" data-ref-parent="fig-heat3dexamples" height="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-2dd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) 2D heatmap
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-heat3dexamples" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-3dd" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-3dd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/examp3dd.png" data-ref-parent="fig-heat3dexamples" height="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-3dd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) 3D Digital heatmap
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-heat3dexamples" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-3dp" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-3dp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/examp3dp.png" data-ref-parent="fig-heat3dexamples" height="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-3dp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) 3D-Printed heatmap
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-heat3dexamples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15: Media types using dataset 1 in the 3D heatmap experiment.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="procedure" class="slide level2">
+<h2>Procedure</h2>
+<p><strong>Treatment Design</strong></p>
+<ul>
+<li>9 stimuli pairs</li>
+<li>3 media types</li>
+<li>2 heat map datasets</li>
+</ul>
+<p><strong>Experiment Design</strong></p>
+<ol type="1">
+<li>Create incomplete blocks on stimuli pairs (choose 4 from 9)</li>
+<li>Randomly assign participant to block on experiment initialization</li>
+<li>Present media type x dataset in randomized order (whole-plot)</li>
+<li>Present stimuli pair in randomized order (split-plot)</li>
+</ol>
+</section></section>
+<section>
+<section id="project-2-experiential-learning" class="title-slide slide level1 center">
+<h1>Project 2: Experiential Learning</h1>
 
+</section>
+<section id="experiential-learning" class="slide level2">
+<h2>Experiential Learning</h2>
+<p>In a dual purpose role, a large sample was obtained for the two previous projects by incorporating the experiments as an experiential learning opportunity for Stat 218 students. This is a six stage project that follows students from participants to consumers of scientific knowledge.</p>
+<div class="columns">
+<div class="column fragment fade-in-then-semi-out" style="width:30%;">
+<p><strong>Informed Consent</strong></p>
+<ul>
+<li>Obtain consent</li>
+<li>Confirm age of majority (≥19)</li>
+</ul>
+</div><div class="column fragment fade-in-then-semi-out" style="width:30%;">
+<p><strong>Pre-experiment</strong></p>
+<ul>
+<li>How does the scientific process differ between researchers and the general population</li>
+</ul>
+</div><div class="column fragment fade-in-then-semi-out" style="width:30%;">
+<p><strong>Experiment</strong></p>
+<ul>
+<li>Provide completion code to show proof of experiment participation</li>
+</ul>
+</div></div>
+</section>
+<section id="experiential-learning-1" class="slide level2">
+<h2>Experiential Learning</h2>
+<div class="columns">
+<div class="column fragment fade-in-then-semi-out" style="width:30%;">
+<p><strong>Post Experiment</strong></p>
+<ul>
+<li>What was the purpose of experiment?</li>
+<li>What were the hypotheses?</li>
+<li>What are the sources of error?</li>
+<li>What were the variables?</li>
+<li>What elements of experimental design were present?</li>
+</ul>
+</div><div class="column fragment fade-in-then-semi-out" style="width:30%;">
+<p><strong>Abstract</strong></p>
+<ul>
+<li>What components of the experiment are now clearer?</li>
+</ul>
+</div><div class="column fragment fade-in-then-semi-out" style="width:30%;">
+<p><strong>Presentation</strong></p>
+<ul>
+<li>How did the information you gained from each stage differ?</li>
+<li>What was emphasized in the presentation that wasn’t emphasized in the the abstract?</li>
+<li>What critiques do you have of the study?</li>
+<li>Did you prefer the abstract or presentation?</li>
+</ul>
+</div></div>
+</section></section>
 <section>
 <section id="roadmap" class="title-slide slide level1 center">
 <h1>Roadmap</h1>
@@ -784,6 +1254,7 @@ Figure&nbsp;7: Chart types used by <span class="citation" data-cites="cleveland1
 </div><div class="column" style="width:33%;">
 <p><strong>Experiential Learning</strong></p>
 <ul>
+<li>☑️ Lit Review</li>
 <li>✅ Design</li>
 <li>➡️ Data Collection
 <ul>
@@ -811,8 +1282,32 @@ Figure&nbsp;7: Chart types used by <span class="citation" data-cites="cleveland1
 </section>
 <section id="contribution-to-literature-1" class="slide level2">
 <h2>Contribution to literature</h2>
-<p>Nearly all studies involving statistical graphics use printed or digitized charts. This is reasonable given that they</p>
-<p>The only exceptions that we found were tactile charts and virtual reality.</p>
+<p>Nearly all studies involving statistical graphics use paper-printed or digitized charts, resulting in a knowledge gap in statistical graphics presented in tangible formats. Our contributions are as follows:</p>
+<div>
+<ol type="1">
+<li class="fragment">Explore the relationship of physical dimensionality on bar charts / heat maps using numerical accuracy of ratio estimations.</li>
+<li class="fragment">Provide recommendations on the construction of 3D-printed statistical graphics.</li>
+<li class="fragment">Explore how students interact with the process of scientific investigation using a “hands-on” statistical study.</li>
+</ol>
+</div>
+<aside class="notes">
+<p>Exceptions include tactile charts, virtual reality, and artistic data physicalization. However, the interaction with these differs vastly with our 3D printed charts.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="questions" class="title-slide slide level1 center">
+<h1>Questions?</h1>
+
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
@@ -823,20 +1318,77 @@ Figure&nbsp;7: Chart types used by <span class="citation" data-cites="cleveland1
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-cdi_hathitrust_hathifiles_uva_x030492864" class="csl-entry" role="listitem">
+<em>1978 Handbook of Agricultural Charts. Enlargements / [u.s. Department of Agriculture]</em>. 1978. District of Columbia: United States. Department of Agriculture; U.S. Dept. of Agriculture ; Distributed by Science; Education Administration.
+</div>
+<div id="ref-3DPopulationDensity" class="csl-entry" role="listitem">
+<span>“<span>3D Population Density</span> of the <span>US</span> - <span>HomeArea</span>.com.”</span> n.d. https://www.homearea.com/featured/3d-population-density/#3128000. Accessed September 17, 2025.
+</div>
 <div id="ref-helen2016" class="csl-entry" role="listitem">
 Armstrong, Helen. 2016. <em>Digital Design Theory : Readings from the Field</em>. Design Briefs. New York, New York: Princeton Architectural Press.
+</div>
+<div id="ref-barfield1989" class="csl-entry" role="listitem">
+Barfield, Woodrow, and Robert Robless. 1989. <span>“The Effects of Two- or Three-Dimensional Graphics on the Problem-Solving Performance of Experienced and Novice Decision Makers.”</span> <em>Behaviour &amp; Information Technology</em> 8 (5): 369–85. <a href="https://doi.org/10.1080/01449298908914567">https://doi.org/10.1080/01449298908914567</a>.
+</div>
+<div id="ref-buja2009" class="csl-entry" role="listitem">
+Buja, Andreas, Dianne Cook, Heike Hofmann, Michael Lawrence, Eun-Kyung Lee, Deborah F. Swayne, and Hadley Wlckham. 2009. <span>“Statistical Inference for Exploratory Data Analysis and Model Diagnostics.”</span> <em>Philosophical Transactions: Mathematical, Physical and Engineering Sciences</em> 367 (1906): 4361–83. <a href="https://www.jstor.org/stable/40485732">https://www.jstor.org/stable/40485732</a>.
 </div>
 <div id="ref-cleveland1984" class="csl-entry" role="listitem">
 Cleveland, William S., and Robert McGill. 1984. <span>“Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods.”</span> <em>Journal of the American Statistical Association</em> 79 (387): 531–54. <a href="https://doi.org/10.1080/01621459.1984.10478080">https://doi.org/10.1080/01621459.1984.10478080</a>.
 </div>
-<div id="ref-croxton1927" class="csl-entry" role="listitem">
-Croxton, Frederick E., and Roy E. Stryker. 1927. <span>“Bar Charts Versus Circle Diagrams.”</span> <em>Journal of the American Statistical Association</em> 22 (160): 473–82. <a href="https://doi.org/10.2307/2276829">https://doi.org/10.2307/2276829</a>.
+<div id="ref-croxton1932" class="csl-entry" role="listitem">
+Croxton, Frederick E., and Harold Stein. 1932. <span>“Graphic Comparisons by Bars, Squares, Circles, and Cubes.”</span> <em>Journal of the American Statistical Association</em> 27 (177): 54–60. <a href="https://doi.org/10.1080/01621459.1932.10503227">https://doi.org/10.1080/01621459.1932.10503227</a>.
+</div>
+<div id="ref-fischer2000" class="csl-entry" role="listitem">
+Fischer, Martin H. 2000. <span>“Do Irrelevant Depth Cues Affect the Comprehension of Bar Graphs?”</span> <em>Applied Cognitive Psychology</em> 14 (2): 151–62. <a href="https://doi.org/10.1002/(SICI)1099-0720(200003/04)14:2<151::AID-ACP629>3.0.CO;2-Z">https://doi.org/10.1002/(SICI)1099-0720(200003/04)14:2&lt;151::AID-ACP629&gt;3.0.CO;2-Z</a>.
+</div>
+<div id="ref-fisher1997" class="csl-entry" role="listitem">
+Fisher, Samuel H., John V. Dempsey, and Robert T. Marousky. 1997. <span>“Data Visualization: Preference and Use of Two-Dimensional and Three-Dimensional Graphs.”</span> <em>Social Science Computer Review</em> 15 (3): 256–63. <a href="https://doi.org/10.1177/089443939701500303">https://doi.org/10.1177/089443939701500303</a>.
+</div>
+<div id="ref-national1977condition" class="csl-entry" role="listitem">
+for Educational Statistics, National Center, National Center for Education Statistics, United States. Office of Educational Research, Improvement. Center for Education Statistics, and Institute of Education Sciences (U.S.). 1977. <em>The Condition of Education</em>. 1975-1979: <span>DHEW</span> Publication. <span>U.S. Department of Education, Office of Educational Research and Improvement, National Center for Education Statistics</span>.
+</div>
+<div id="ref-penguins" class="csl-entry" role="listitem">
+Horst, Allison Marie, Alison Presmanes Hill, and Kristen B Gorman. 2020. <em>Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data</em>. <a href="https://doi.org/10.5281/zenodo.3960218">https://doi.org/10.5281/zenodo.3960218</a>.
+</div>
+<div id="ref-kraus2020" class="csl-entry" role="listitem">
+Kraus, Matthias, Katrin Angerbauer, Juri Buchmüller, Daniel Schweitzer, Daniel A. Keim, Michael Sedlmair, and Johannes Fuchs. 2020. <span>“CHI ’20: CHI Conference on Human Factors in Computing Systems.”</span> In, 1–14. Honolulu HI USA: ACM. <a href="https://doi.org/10.1145/3313831.3376675">https://doi.org/10.1145/3313831.3376675</a>.
+</div>
+<div id="ref-levy1996" class="csl-entry" role="listitem">
+Levy, Ellen, Jeff Zacks, Barbara Tversky, and Diane Schiano. 1996. <span>“The SIGCHI Conference.”</span> In, 42–49. Vancouver, British Columbia, Canada: ACM Press. <a href="https://doi.org/10.1145/238386.238400">https://doi.org/10.1145/238386.238400</a>.
+</div>
+<div id="ref-melodycarswell1991" class="csl-entry" role="listitem">
+Melody Carswell, C., Sylvia Frankenberger, and Donald Bernhard. 1991. <span>“Graphing in Depth: Perspectives on the Use of Three-Dimensional Graphs to Represent Lower-Dimensional Data.”</span> <em>Behaviour &amp; Information Technology</em> 10 (6): 459–74. <a href="https://doi.org/10.1080/01449299108924304">https://doi.org/10.1080/01449299108924304</a>.
+</div>
+<div id="ref-ModleyRudolf1952Pag" class="csl-entry" role="listitem">
+Modley, Rudolf. 1952. <em>Pictographs and Graphs : How to Make and Use Them</em>. New York: Harper.
 </div>
 <div id="ref-rgl" class="csl-entry" role="listitem">
 Murdoch, Duncan, and Daniel Adler. 2024. <em>Rgl: 3D Visualization Using OpenGL</em>. <a href="https://CRAN.R-project.org/package=rgl">https://CRAN.R-project.org/package=rgl</a>.
 </div>
+<div id="ref-peña2020" class="csl-entry" role="listitem">
+Peña, Alyssa, Eric Ragan, and Lane Harrison. 2020. <span>“Memorability of Enhanced Informational Graphics.”</span> <em>Interdisciplinary Journal of Signage and Wayfinding</em> 4 (1). <a href="https://doi.org/10.15763/issn.2470-9670.2020.v4.i1.a54">https://doi.org/10.15763/issn.2470-9670.2020.v4.i1.a54</a>.
+</div>
+<div id="ref-volcano" class="csl-entry" role="listitem">
+R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-siegrist1996" class="csl-entry" role="listitem">
+Siegrist, Michael. 1996. <span>“The Use or Misuse of Three-Dimensional Graphs to Represent Lower-Dimensional Data.”</span> <em>Behaviour &amp; Information Technology</em> 15 (2): 96–100. <a href="https://doi.org/10.1080/014492996120300">https://doi.org/10.1080/014492996120300</a>.
+</div>
+<div id="ref-stewart2009" class="csl-entry" role="listitem">
+Stewart, Brandie M., Jessica M. Cipolla, and Lisa A. Best. 2009. <span>“Extraneous Information and Graph Comprehension: Implications for Effective Design Choices.”</span> Edited by M. Henderson. <em>Campus-Wide Information Systems</em> 26 (3): 191–200. <a href="https://doi.org/10.1108/10650740910967375">https://doi.org/10.1108/10650740910967375</a>.
+</div>
+<div id="ref-tufte2001" class="csl-entry" role="listitem">
+Tufte, Edward R. 2001. <em>The Visual Display of Quantitative Information</em>. 2nd ed. Cheshire, Conn: Graphics Press.
+</div>
 <div id="ref-vanderplas2020" class="csl-entry" role="listitem">
 Vanderplas, Susan, Dianne Cook, and Heike Hofmann. 2020. <span>“Testing Statistical Charts: What Makes a Good Graph?”</span> <em>Annual Review of Statistics and Its Application</em> 7 (1): 61–88. <a href="https://doi.org/10.1146/annurev-statistics-031219-041252">https://doi.org/10.1146/annurev-statistics-031219-041252</a>.
+</div>
+<div id="ref-vanderplas2017" class="csl-entry" role="listitem">
+VanderPlas, Susan, and Heike Hofmann. 2017. <span>“Clusters Beat Trend!? Testing Feature Hierarchy in Statistical Graphics.”</span> <em>Journal of Computational and Graphical Statistics</em> 26 (2): 231–42. <a href="https://www.jstor.org/stable/44861949">https://www.jstor.org/stable/44861949</a>.
+</div>
+<div id="ref-zacks1998" class="csl-entry" role="listitem">
+Zacks, Jeff, Ellen Levy, Barbara Tversky, and Diane J. Schiano. 1998. <span>“Reading Bar Graphs: Effects of Extraneous Depth Cues and Graphical Context.”</span> <em>Journal of Experimental Psychology: Applied</em> 4 (2): 119–38. <a href="https://doi.org/10.1037/1076-898X.4.2.119">https://doi.org/10.1037/1076-898X.4.2.119</a>.
 </div>
 </div>
 </section></section>
