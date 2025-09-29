@@ -8,7 +8,7 @@ format:
   revealjs:
     smaller: true
     navigation-mode: vertical
-    controls: false
+    controls: true
 execute:
   fig-align: center
   fig-dpi: 600
@@ -715,7 +715,7 @@ where
 
 ```{r}
 #| label: fig-ch1-raw
-#| fig-cap: "Responses of Project 1f"
+#| fig-cap: "Responses of Project 1"
 pilot <- read.csv('../ch1-bar3d/writeups/_data/paper-data.csv') %>% 
   filter(type != "NA")
 ggplot(pilot, aes(x = Height*100, y = byHowMuch)) + 
