@@ -7,6 +7,11 @@ date-format: long
 format: 
   revealjs:
     smaller: true
+    navigation-mode: vertical
+    controls: false
+execute:
+  fig-align: center
+  fig-dpi: 600
 logo: "https://ucomm.unl.edu/sites/unl.edu.university-communication/files/styles/no_crop_1440/public/media/image/nebraska-n.jpg?itok=u5l1L9V-"
 bibliography: references.bib
 ---
@@ -168,6 +173,15 @@ Many studies on 2D and 3D charts have one key limitation: they are limited to 3D
 ::: notes
 -   @kraus2020 uses VR
 :::
+
+## Why study 3D-printed charts?
+
+There are several reasons to explore this medium of statistical graphics.
+
+- Interactions are more natural than digitized counterparts
+- Increased recall of information ^[@stusakEvaluatingMemorabilityPhysical2015] ^[@stusakIfYourMind2016]
+- Realistic use cases for informational/educational purposes
+
 
 ## Research Objectives
 
@@ -511,6 +525,9 @@ In a dual purpose role, a large sample was obtained for the two previous project
 :::
 
 
+---
+
+![Word bigram from the abstract reflection module. Students answered the question: "What components of the experiment are clearer now than they were as a participant? What questions do you still have for the experimenter? Write 3-5 sentences reflecting on the abstract." ](images/bigram-abstract.png){#fig-bigram}
 
 
 # Project 3: 3D Heat Maps
@@ -696,7 +713,31 @@ where
 
 ## Project 1
 
-Some plots here of the data
+```{r}
+#| label: fig-ch1-raw
+#| fig-cap: "Responses of Project 1f"
+pilot <- read.csv('../ch1-bar3d/writeups/_data/paper-data.csv') %>% 
+  filter(type != "NA")
+ggplot(pilot, aes(x = Height*100, y = byHowMuch)) + 
+  geom_point() + 
+  geom_abline(slope = 1, color = 'red') +
+  facet_grid(type ~ plot, margins = T, labeller = 'label_both') + 
+  theme_bw() + 
+  theme(aspect.ratio = 1/1)
+```
+## Project 1
+
+```{r}
+#| label: fig-ch1-logcm
+#| fig-cap: "Responses of Project 1 using log2(|Error| + 1/8)"
+pilot <- read.csv('../ch1-bar3d/writeups/_data/paper-data.csv') %>% 
+  filter(type != "NA")
+ggplot(pilot, aes(x = Height*100, y = response)) + 
+  geom_point() + 
+  facet_grid(type ~ plot, margins = T, labeller = 'label_both') + 
+  theme_bw() + 
+  theme(aspect.ratio = 1/1)
+```
 
 ## Project 1
 
