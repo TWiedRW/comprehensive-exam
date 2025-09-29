@@ -2,23 +2,23 @@
 title: "Beyond the Surface"
 subtitle: "Evaluating Perception and Accuracy in 3D Printed Data Visualizations"
 author: "Tyler Wiederich"
-date: "2025-09-18"
+date: "2025-09-29"
 date-format: long
 format: 
   revealjs:
     smaller: true
-logo: "https://ucomm.unl.edu/sites/unl.edu.university-communication/files/styles/no_crop_960/public/media/image/R-Nebraska_N-name-RGB.png?itok=T3Hr--6l"
+logo: "https://ucomm.unl.edu/sites/unl.edu.university-communication/files/styles/no_crop_1440/public/media/image/nebraska-n.jpg?itok=u5l1L9V-"
 bibliography: references.bib
 ---
 
 ## Overview
 
 -   Motivation and Background
+-   Roadmap
 -   Projects
     1.  3D Bar Charts
     2.  Experiential Learning
     3.  3D Heat Maps
--   Roadmap
 -   Contribution
 
 :::{.notes}
@@ -120,9 +120,23 @@ There are many instances of data physicalization, but often utilized for unique 
 
 # Background
 
-## Background
+## Evaluation of 3D Charts
 
-Types of 3D charts can be grouped into one of two categories.
+There are many possible metrics to evaluate the qualities of a chart ^[@vanderplas2020] ^[@vanderplas2017] ^[@buja2009] ^[@cleveland1984] ^[@peña2020].
+
+-   Accuracy
+
+-   Response times
+
+-   Pattern recognition
+
+-   Memorability
+
+-   Preference
+
+## Types of 3D charts
+
+3D charts can be grouped into one of two categories.
 
 ::::: columns
 ::: {.fragment .fade-in-then-semi-out .column width="45%\""}
@@ -144,60 +158,10 @@ Types of 3D charts can be grouped into one of two categories.
 
 [^3]: @tufte2001
 
-## Evaluation of 3D Charts
-
-There are many possible metrics to evaluate the qualities of a chart ^[@vanderplas2020] ^[@vanderplas2017] ^[@buja2009] ^[@cleveland1984] ^[@peña2020].
-
--   Accuracy
-
--   Response times
-
--   Pattern recognition
-
--   Memorability
-
--   Preference
-
-## Decorative 3D
-
-The relationship between 2D and 3D bar charts presented on paper or computer screens has been widely studied.
-
-::: {.fragment .fade-in-then-semi-out}
--   Accuracy tends to be worse than 2D equivalents, although not always with statistical significance [@zacks1998; @siegrist1996; @melodycarswell1991; @stewart2009].
-:::
-
-::: {.fragment .fade-in-then-semi-out}
--   More time is needed to answer questions than 2D equivalents [@siegrist1996; @fischer2000; @stewart2009].
-:::
-
-::: {.fragment .fade-in-then-semi-out}
--   2D charts chosen more often when used for numerical estimations, although 3D is chosen more often when presenting results to others [@levy1996; @fisher1997; @stewart2009].
-:::
-
-## Informational 3D
-
-Unlike decorative 3D elements, direct comparisons of dimensionality is more limited when the third dimension coveys information.
-
-::: {.fragment .fade-in-then-semi-out}
--   Accuracy is worse for volumes than for areas [@croxton1932].
-:::
-
-::: {.fragment .fade-in-then-semi-out}
--   Can sometimes better encode information [@barfield1989].
-:::
-
-::: {.fragment .fade-in-then-semi-out}
--   3D heat maps have lower error rates than 2D heat maps in virtual reality [@kraus2020].
-:::
-
-::: notes
--   @kraus2020 talks about more time needed for 3D charts
--   Also, @kraus2020 mentioned 2D was better for overview tasks
-:::
 
 ## Data beyond a screen
 
-All of reported results have one key limitation: they are limited to 3D charts presented on 2D surfaces. With modern technology, we are able to create 3D charts in our 3D world via 3D-printing. The rising popularity and decreasing cost of 3D printers makes this option more feasible to implement in the communication of data.
+Many studies on 2D and 3D charts have one key limitation: they are limited to 3D charts presented on 2D surfaces. With modern technology, we are able to create 3D charts in our 3D world via 3D-printing. The rising popularity and decreasing cost of 3D printers makes this option more feasible to implement in the communication of data.
 
 ![3D-printed representation of 3D printer sales. Source: Wall Street Journal [(link to print)](https://www.thingiverse.com/thing:365994)](images/first-3d-printed-chart.jpg){#fig-wsj2014 fig-align="center"}
 
@@ -227,6 +191,100 @@ I believe only there are only a couple of studies that focus on the memorability
 
 :::
 
+## Research Overview
+
+:::{.columns}
+
+:::{.column width=60%}
+
+:::{.fragment fragment-index=1}
+
+**Project 1**
+
+- Study of 3D-printed bar charts 
+- Pilot study within the Statistics department
+
+:::
+
+:::{.fragment fragment-index=2}
+
+**Project 2**
+
+- Incorporate the experiment of Project 1 into the curriculum of Stat 218
+- Give students a series of reflections related to the experiment, allowing us to follow students from participants to consumers of scientific knowledge
+
+:::
+
+:::{.fragment fragment-index=3}
+
+**Project 3**
+
+- Same format as Project 2, but replacing the 3D bar charts with 3D heat maps
+
+:::
+
+:::
+
+:::{.column width=40%}
+
+:::{.fragment .fade-in-then-out fragment-index=1 .absolute layout="[[-1], [1], [-1]]" width=auto}
+
+![](images/proj1-examp.jpg){fig-align='center'}
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=2 .absolute layout="[[-1], [1], [-1]]" width=auto}
+
+![](images/stat218-proj1.JPG){fig-align='center'}
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=3 .absolute layout="[[-1], [1], [-1]]" width=auto}
+
+![](images/examp3dp.png){fig-align='center'}
+
+:::
+
+:::
+
+:::
+
+## Roadmap
+
+:::::: {.columns align="center"}
+::: {.column width="33%"}
+**3D Bar Charts**
+
+-   ✅ Lit Review
+-   ✅ Design
+-   ✅ Data Collection
+-   ✅ Analysis
+-   ✅ Write-up
+:::
+
+::: {.column width="33%"}
+**Experiential Learning**
+
+-   ☑️ Lit Review
+-   ✅ Design
+-   ➡️ Data Collection
+    -   ✅ 3D Bar Charts
+    -   ➡️ 3D Heat Maps
+-   Analysis
+-   Write-up
+:::
+
+::: {.column width="33%"}
+**3D Heat Maps**
+
+-   ✅ Lit Review
+-   ✅ Design
+-   ➡️ Data Collection
+-   Analysis
+-   Write-up
+:::
+::::::
+
 # Project 1: 3D Bar Charts
 
 ## 3D Bar Charts
@@ -239,6 +297,22 @@ I believe only there are only a couple of studies that focus on the memorability
 ![Figure from @ModleyRudolf1952Pag](images/skewed-angle.jpg){#fig-examp3 height="400px"}
 
 Three examples of 3D bar charts found in publications. 
+:::
+
+## Background
+
+The relationship between 2D and 3D bar charts presented on paper or computer screens has been widely studied.
+
+::: {.fragment .fade-in-then-semi-out}
+-   Accuracy tends to be worse than 2D equivalents, although not always with statistical significance [@zacks1998; @siegrist1996; @melodycarswell1991; @stewart2009].
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   More time is needed to answer questions than 2D equivalents [@siegrist1996; @fischer2000; @stewart2009].
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   2D charts chosen more often when used for numerical estimations, although 3D is chosen more often when presenting results to others [@levy1996; @fisher1997; @stewart2009].
 :::
 
 ## Overview of Project 1
@@ -376,155 +450,6 @@ Using a generalized additive model (GAM), the only significant effect was either
 -   Integration of the experiment into Stat 218 has provided many more responses, but results have not yet been analyzed.
 :::
 
-# Project 3: 3D Heat Maps
-
-## 3D Heat Maps
-
-:::{#fig-heatmaps layout-ncol=2}
-
-![Figure from @national1977condition](images/heatmap3d.png){#fig-nat77 height=400px}
-
-![Figure from @3DPopulationDensity](images/lincoln-pop.png){#fig-lincoln-pop height=400px}
-
-Examples of 3D heat maps.
-:::
-
-## Overview of Project 3
-
-We maintain the same objective when adding information to the third dimension: does numerical accuracy of ratio estimations differ between dimensionality and projections of chart types. However, it is important to note that direct translations of 2D and 3D heatmaps require different visual cues.
-
-::: {#fig-color-height layout-ncol="2"}
-![Flatter height scale](images/height-color-0.3.png){#fig-flat3d}
-
-![Stretched height scale](images/height-color-2.png){#fig-tall3d}
-
-Two figures representing the volcano dataset [@volcano] using different height scaling factors. Both figures use the same color scale, but there is no "correct" translation of color into the measurable height.
-:::
-
-::: notes
-2D heat maps use color, 3D heat maps use height and can possibly use color as well.
-:::
-
-## Stimuli Construction
-
-```{r}
-load('stimuli.rda')
-```
-
-The design of the 3D heat map experiment uses the method of constant stimuli: ratios are estimated with respect to one stimuli height that remains the same.
-
-Setting 50 as the constant and 90 as the maximum, a sequence of stimuli are chosen by equally partitioning the ratios between $50/50=1$ and $50/90\approx0.556$. The same ratios are used when setting 50 as the maximum in the stimuli pair.
-
-```{r}
-#| label: fig-p3-stimuli
-#| fig-cap: "Stimuli used in 3D heat map experiment. All values are paired with the stimuli magnitude of 50."
-#| fig-subcap:
-#| - "Stimuli values"
-#| - "Ratios of stimuli pairs"
-#| layout-ncol: 2
-stimuli %>% 
-  ggplot(mapping = aes(x = pair_id, y = values)) + 
-  geom_bar(stat = 'identity', width = 1, color = 'black', fill = '#B50000') + 
-  geom_text(aes(label = round(values, 1), y = 5), size = 5) + 
-  theme_minimal() + 
-  annotate('text', x = 5, y = 25, label = '*', size = 8) +
-  labs(x = '', y = 'Magnitude of Stimuli') +
-  scale_x_continuous(breaks = 1:9) + 
-  scale_y_continuous(limits = c(0, 100)) +
-  theme(panel.grid.major.x = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        aspect.ratio = 1/2,
-        axis.text.y = element_text(size = 12),
-        axis.title.y = element_text(size = 14),
-        axis.text.x = element_blank(),
-        panel.grid.major.y = element_line(color = 'grey70'),
-        panel.grid.minor.y = element_line(color = 'grey80', linetype = 'dashed'))
-
-stimuli %>% 
-  mutate(ratio = round(map2_dbl(values, constant, \(x,y)(min(x,y)/max(x,y))), 2)) %>% 
-  select(ratio) %>% 
-  distinct() %>% 
-  ggplot(mapping = aes(x = 1:5, y = ratio)) + 
-  geom_bar(stat = 'identity', width = 1, color = 'black', fill = '#B50000') + 
-  geom_text(aes(label = round(ratio, 2), y = 0.125/2), size = 5) + 
-  theme_minimal() + 
-  labs(x = '', y = 'Ratio of Stimuli') +
-  scale_x_continuous(breaks = 1:5) + 
-  scale_y_continuous(limits = c(0, 1)) +
-  theme(panel.grid.major.x = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(size = 12),
-        axis.title.y = element_text(size = 14),
-        aspect.ratio = 1/2,
-        panel.grid.major.y = element_line(color = 'grey70'),
-        panel.grid.minor.y = element_line(color = 'grey80', linetype = 'dashed'))
-```
-<!---
-## Aside
-
-What is the benefit of using the same ratio twice?
-
-::: fragment
-```{r}
-#| label: fig-diff-ratio
-#| fig-cap: "Scatterplot of ratios and difference of each stimuli pairs."
-stimuli %>% 
-  mutate(diff = round(map2_dbl(values, constant, \(x,y)(max(x,y)-min(x,y))),1),
-         ratio = round(map2_dbl(values, constant, \(x,y)(min(x,y)/max(x,y))), 2),
-         constant.in.pair = case_when(
-           values == constant ~ 'Stimuli are same value',
-           values < constant ~ 'Constant is larger',
-           values > constant ~ 'Constant is smaller'
-         )) %>% 
-  ggplot(aes(x = ratio, y = diff, color = constant.in.pair)) + 
-  geom_point() + 
-  labs(x = 'Ratio of stimuli',
-       y = 'Difference of stimuli',
-       color = 'Stimuli status') + 
-  theme_bw() + 
-  theme(aspect.ratio = 1)
-```
-:::
-
-::: notes
-Since color does not have a direct translation to height, it is a good idea to see if ratio estimations are different depending on the physical different of the bars on the heat map. 
-
-Using the method of constant stimuli, stimuli pairs have a larger difference for smaller ratios.
-
-- If there is a difference in ratio estimations between stimuli pairs at the same ratio, then we show that the physical difference is also an important factor, meaning that future studies need to take this into consideration
-:::
-
---->
-
-## Media Types
-
-:::{#fig-heat3dexamples layout-ncol=3}
-
-![2D heatmap](images/examp2dd.png){#fig-2dd height=300px}
-
-![3D Digital heatmap](images/examp3dd.png){#fig-3dd height=300px}
-
-![3D-Printed heatmap](images/examp3dp.png){#fig-3dp height=300px}
-
-Media types using dataset 1 in the 3D heatmap experiment.
-:::
-
-## Procedure
-
-**Treatment Design**
-
--   9 stimuli pairs
--   3 media types
--   2 heat map datasets
-
-**Experiment Design**
-
-1.  Create incomplete blocks on stimuli pairs (choose 4 from 9)
-2.  Randomly assign participant to block on experiment initialization
-3.  Present media type x dataset in randomized order (whole-plot)
-4.  Present stimuli pair in randomized order (split-plot)
-
 # Project 2: Experiential Learning
 
 ## Experiential Learning
@@ -585,43 +510,147 @@ In a dual purpose role, a large sample was obtained for the two previous project
 
 :::
 
-# Roadmap
 
-## Roadmap
 
-:::::: {.columns align="center"}
-::: {.column width="33%"}
-**3D Bar Charts**
 
--   ✅ Lit Review
--   ✅ Design
--   ✅ Data Collection
--   ✅ Analysis
--   ✅ Write-up
+# Project 3: 3D Heat Maps
+
+## 3D Heat Maps
+
+:::{#fig-heatmaps layout-ncol=2}
+
+![Figure from @national1977condition](images/heatmap3d.png){#fig-nat77 height=400px}
+
+![Figure from @3DPopulationDensity](images/lincoln-pop.png){#fig-lincoln-pop height=400px}
+
+Examples of 3D heat maps.
 :::
 
-::: {.column width="33%"}
-**Experiential Learning**
+## Background
 
--   ☑️ Lit Review
--   ✅ Design
--   ➡️ Data Collection
-    -   ✅ 3D Bar Charts
-    -   ➡️ 3D Heat Maps
--   Analysis
--   Write-up
+Unlike decorative 3D elements, direct comparisons of dimensionality is more limited when the third dimension coveys information.
+
+::: {.fragment .fade-in-then-semi-out}
+-   Accuracy is worse for volumes than for areas [@croxton1932].
 :::
 
-::: {.column width="33%"}
-**3D Heat Maps**
-
--   ✅ Lit Review
--   ✅ Design
--   ➡️ Data Collection
--   Analysis
--   Write-up
+::: {.fragment .fade-in-then-semi-out}
+-   3D charts can sometimes better encode information than 2D charts [@barfield1989].
 :::
-::::::
+
+::: {.fragment .fade-in-then-semi-out}
+-   3D heat maps have lower error rates than 2D heat maps in virtual reality [@kraus2020].
+:::
+
+::: notes
+-   @kraus2020 talks about more time needed for 3D charts
+-   Also, @kraus2020 mentioned 2D was better for overview tasks
+:::
+
+## Overview of Project 3
+
+We maintain the same objective when adding information to the third dimension: does numerical accuracy of ratio estimations differ between dimensionality and projections of chart types. However, it is important to note that direct translations of 2D and 3D heatmaps require different visual cues.
+
+::: {#fig-color-height layout-ncol="2"}
+![Flatter height scale](images/height-color-0.3.png){#fig-flat3d}
+
+![Stretched height scale](images/height-color-2.png){#fig-tall3d}
+
+Two figures representing the volcano dataset [@volcano] using different height scaling factors. Both figures use the same color scale, but there is no "correct" translation of color into the measurable height.
+:::
+
+::: notes
+2D heat maps use color, 3D heat maps use height and can possibly use color as well.
+:::
+
+
+
+## Stimuli Construction
+
+```{r}
+load('stimuli.rda')
+```
+
+The design of the 3D heat map experiment uses the method of constant stimuli: ratios are estimated with respect to one stimuli height that remains the same.
+
+Setting 50 as the constant and 90 as the maximum, a sequence of stimuli are chosen by equally partitioning the ratios between $50/50=1$ and $50/90\approx0.556$. The same ratios are used when setting 50 as the maximum in the stimuli pair.
+
+```{r}
+#| label: fig-p3-stimuli
+#| fig-cap: "Stimuli used in 3D heat map experiment. All values are paired with the stimuli magnitude of 50."
+#| fig-subcap:
+#| - "Stimuli values"
+#| - "Ratios of stimuli pairs"
+#| layout-ncol: 2
+stimuli %>% 
+  ggplot(mapping = aes(x = pair_id, y = values)) + 
+  geom_bar(stat = 'identity', width = 1, color = 'black', fill = '#B50000') + 
+  geom_text(aes(label = round(values, 1), y = 5), size = 7) + 
+  theme_minimal() + 
+  annotate('text', x = 5, y = 25, label = '*', size = 12) +
+  labs(x = '', y = 'Magnitude of Stimuli') +
+  scale_x_continuous(breaks = 1:9) + 
+  scale_y_continuous(limits = c(0, 100)) +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        aspect.ratio = 1/2,
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 14),
+        axis.text.x = element_blank(),
+        panel.grid.major.y = element_line(color = 'grey70'),
+        panel.grid.minor.y = element_line(color = 'grey80', linetype = 'dashed'))
+
+stimuli %>% 
+  mutate(ratio = round(map2_dbl(values, constant, \(x,y)(min(x,y)/max(x,y))), 2)) %>% 
+  select(ratio) %>% 
+  distinct() %>% 
+  ggplot(mapping = aes(x = 1:5, y = ratio)) + 
+  geom_bar(stat = 'identity', width = 1, color = 'black', fill = '#B50000') + 
+  geom_text(aes(label = round(ratio, 2), y = 0.125/2), size = 7) + 
+  annotate('text', x = 5, y = 0.5, label = '*', size = 12) +
+  theme_minimal() + 
+  labs(x = '', y = 'Ratio of Stimuli') +
+  scale_x_continuous(breaks = 1:5) + 
+  scale_y_continuous(limits = c(0, 1)) +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 14),
+        aspect.ratio = 1/2,
+        panel.grid.major.y = element_line(color = 'grey70'),
+        panel.grid.minor.y = element_line(color = 'grey80', linetype = 'dashed'))
+```
+
+
+## Media Types
+
+:::{#fig-heat3dexamples layout-ncol=3}
+
+![2D heatmap](images/examp2dd.png){#fig-2dd height=300px}
+
+![3D Digital heatmap](images/examp3dd.png){#fig-3dd height=300px}
+
+![3D-Printed heatmap](images/examp3dp.png){#fig-3dp height=300px}
+
+Media types using dataset 1 in the 3D heatmap experiment.
+:::
+
+## Procedure
+
+**Treatment Design**
+
+-   9 stimuli pairs
+-   3 media types
+-   2 heat map datasets
+
+**Experiment Design**
+
+1.  Create incomplete blocks on stimuli pairs (choose 4 from 9)
+2.  Randomly assign participant to block on experiment initialization
+3.  Present media type x dataset in randomized order (whole-plot)
+4.  Present stimuli pair in randomized order (split-plot)
+
 
 # Contribution to literature
 
@@ -642,3 +671,78 @@ Exceptions include tactile charts, virtual reality, and artistic data physicaliz
 # Questions?
 
 ## References
+
+:::{#refs}
+:::
+
+# Appendix
+
+## Project 1
+
+Using a linear mixed model approach, a suitable model is: 
+
+$$
+\log_2(|\text{Error}|+ 1/8)=\mu+R_i+T_j+M(R)_{k(i)} + \gamma_l + \omega_{lm} +  \epsilon_{ijklmn}
+$$
+
+where
+
+- $R_i$ is the effect of ratio i
+- $T_j$ is the effect of type j
+- $M(R)_{k(i)}$ is the effect of Media k nested in Ratio i
+- $\gamma_l\sim N(0,\sigma^2_{kit})$ 
+- $\omega_{lm}\sim N(0,\sigma^2_{sub-kit})$ 
+- $\epsilon_{ijkl}\sim N(0,\sigma^2_{e})$
+
+## Project 1
+
+Some plots here of the data
+
+## Project 1
+
+With estimates from the pilot study, a power analysis can be conducted. Note that 18 out of 21 total kits were used in the analysis of the pilot study.
+
+- Power > 0.8 for ratio with 1 subject / kit
+- Power > 0.8 for plot(ratio) with 2 subjects / kit
+- Power > 0.8 for chart type with 17 subjects / kit
+
+
+- $n=1$ per kit: Power > 0.8 for ratio of 46.4 between 3dd and 3dp
+- $n=10$ per kit: Power > 0.8 for 5/21 plot(ratio) comparisons
+- $n=20$ per kit: Power > 0.8 for 11/21 plot(ratio) comparisons
+- $n=40$ per kit: Power > 0.8 for 13/21 plot(ratio) comparisons
+
+Power is low when the ratio is 17.8 and 56.2. Also note that $n=40$ per kit equates to $840$ total subjects across 21 kits, which is reasonable given the number of Stat 218 students enrolled across multiple semesters.
+
+## Project 3
+
+What is the benefit of using the same ratio twice?
+
+```{r}
+#| label: fig-diff-ratio
+#| fig-cap: "Scatterplot of ratios and difference of each stimuli pairs."
+stimuli %>% 
+  mutate(diff = round(map2_dbl(values, constant, \(x,y)(max(x,y)-min(x,y))),1),
+         ratio = round(map2_dbl(values, constant, \(x,y)(min(x,y)/max(x,y))), 2),
+         constant.in.pair = case_when(
+           values == constant ~ 'Stimuli are same value',
+           values < constant ~ 'Constant is larger',
+           values > constant ~ 'Constant is smaller'
+         )) %>% 
+  ggplot(aes(x = ratio, y = diff, color = constant.in.pair)) + 
+  geom_point() + 
+  scale_color_viridis_d(option = 'H') +
+  labs(x = 'Ratio of stimuli',
+       y = 'Difference of stimuli',
+       color = 'Stimuli status') + 
+  theme_bw() + 
+  theme(aspect.ratio = 1)
+```
+
+::: notes
+Since color does not have a direct translation to height, it is a good idea to see if ratio estimations are different depending on the physical different of the bars on the heat map. 
+
+Using the method of constant stimuli, stimuli pairs have a larger difference for smaller ratios.
+
+- If there is a difference in ratio estimations between stimuli pairs at the same ratio, then we show that the physical difference is also an important factor, meaning that future studies need to take this into consideration
+:::
